@@ -7,23 +7,33 @@
 
 import Foundation
 
-protocol ListPhotosUI: AnyObject {
-    func update(photos: [PhotoEntity])
+protocol ListPhotosPresentable: AnyObject {
+    var ui: ListPhotosUI? { get }
+    var viewModels: [ViewModel] { get }
+    func onViewAppear()
 }
 
-class ListPhotosPresenter {
-    var ui: ListPhotosUI?
+protocol ListPhotosUI: AnyObject {
+    func update(photos: [ViewModel])
+}
+
+class ListPhotosPresenter: ListPhotosPresentable {
+    weak var ui: ListPhotosUI?
     
-    private let listPhotosInteractor: ListPhotosInteractor
+    private let listPhotosInteractor: ListPhotosInteractable
+    var viewModels: [ViewModel] = []
+    private let mapper: Mapper
     
-    init(listPhotosInteractor: ListPhotosInteractor) {
+    init(listPhotosInteractor: ListPhotosInteractable, mapper: Mapper = Mapper()) {
         self.listPhotosInteractor = listPhotosInteractor
+        self.mapper = mapper
     }
     
     func onViewAppear(){
         Task {
             let models = await listPhotosInteractor.getListPhotos()
-            ui?.update(photos: models)
+            viewModels = models.map(mapper.map(entity:))
+            ui?.update(photos: viewModels)
         }
     }
 }

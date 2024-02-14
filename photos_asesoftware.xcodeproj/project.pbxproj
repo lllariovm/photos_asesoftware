@@ -18,6 +18,10 @@
 		1C5F7F632B7D4A830094912F /* ListPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F622B7D4A830094912F /* ListPhotosInteractor.swift */; };
 		1C5F7F652B7D4A8C0094912F /* ListPhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F642B7D4A8C0094912F /* ListPhotosRouter.swift */; };
 		1C5F7F682B7D4AB80094912F /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F672B7D4AB80094912F /* PhotoEntity.swift */; };
+		1C5F7F6A2B7D50B90094912F /* PhotoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F692B7D50B90094912F /* PhotoCellView.swift */; };
+		1C5F7F6D2B7D54B60094912F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5F7F6C2B7D54B60094912F /* Kingfisher */; };
+		1C5F7F702B7D5E8B0094912F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F6F2B7D5E8B0094912F /* ViewModel.swift */; };
+		1C5F7F722B7D60210094912F /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F712B7D60210094912F /* Mapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,9 @@
 		1C5F7F622B7D4A830094912F /* ListPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotosInteractor.swift; sourceTree = "<group>"; };
 		1C5F7F642B7D4A8C0094912F /* ListPhotosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotosRouter.swift; sourceTree = "<group>"; };
 		1C5F7F672B7D4AB80094912F /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
+		1C5F7F692B7D50B90094912F /* PhotoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellView.swift; sourceTree = "<group>"; };
+		1C5F7F6F2B7D5E8B0094912F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1C5F7F712B7D60210094912F /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5F7F6D2B7D54B60094912F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,8 @@
 				1C5F7F602B7D4A7B0094912F /* ListPhotosPresenter.swift */,
 				1C5F7F622B7D4A830094912F /* ListPhotosInteractor.swift */,
 				1C5F7F642B7D4A8C0094912F /* ListPhotosRouter.swift */,
+				1C5F7F692B7D50B90094912F /* PhotoCellView.swift */,
+				1C5F7F6E2B7D5E750094912F /* ViewModel */,
 				1C5F7F662B7D4AA10094912F /* Entities */,
 			);
 			path = ListPhotos;
@@ -96,6 +106,15 @@
 				1C5F7F672B7D4AB80094912F /* PhotoEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		1C5F7F6E2B7D5E750094912F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C5F7F6F2B7D5E8B0094912F /* ViewModel.swift */,
+				1C5F7F712B7D60210094912F /* Mapper.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +133,9 @@
 			dependencies = (
 			);
 			name = photos_asesoftware;
+			packageProductDependencies = (
+				1C5F7F6C2B7D54B60094912F /* Kingfisher */,
+			);
 			productName = photos_asesoftware;
 			productReference = 1C5F7F432B7D49ED0094912F /* photos_asesoftware.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 1C5F7F3A2B7D49ED0094912F;
+			packageReferences = (
+				1C5F7F6B2B7D54B60094912F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 1C5F7F442B7D49ED0094912F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -171,8 +196,11 @@
 				1C5F7F632B7D4A830094912F /* ListPhotosInteractor.swift in Sources */,
 				1C5F7F4B2B7D49ED0094912F /* ViewController.swift in Sources */,
 				1C5F7F612B7D4A7B0094912F /* ListPhotosPresenter.swift in Sources */,
+				1C5F7F702B7D5E8B0094912F /* ViewModel.swift in Sources */,
+				1C5F7F722B7D60210094912F /* Mapper.swift in Sources */,
 				1C5F7F652B7D4A8C0094912F /* ListPhotosRouter.swift in Sources */,
 				1C5F7F472B7D49ED0094912F /* AppDelegate.swift in Sources */,
+				1C5F7F6A2B7D50B90094912F /* PhotoCellView.swift in Sources */,
 				1C5F7F5F2B7D4A730094912F /* ListPhotosView.swift in Sources */,
 				1C5F7F492B7D49ED0094912F /* SceneDelegate.swift in Sources */,
 				1C5F7F512B7D49ED0094912F /* photos_asesoftware.xcdatamodeld in Sources */,
@@ -389,6 +417,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C5F7F6B2B7D54B60094912F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C5F7F6C2B7D54B60094912F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C5F7F6B2B7D54B60094912F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1C5F7F4F2B7D49ED0094912F /* photos_asesoftware.xcdatamodeld */ = {

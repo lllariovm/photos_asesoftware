@@ -10,12 +10,13 @@ import UIKit
 
 class ListPhotosRouter {
     func showListPhotos(window: UIWindow?){
-        let view = ListPhotosView()
+        
         let interactor = ListPhotosInteractor()
         let presenter = ListPhotosPresenter(listPhotosInteractor: interactor)
         
+        let view = ListPhotosView(presenter: presenter)
         presenter.ui = view
-        view.presenter = presenter
+        // view.presenter = presenter
         
         window?.rootViewController = view
         window?.makeKeyAndVisible()
