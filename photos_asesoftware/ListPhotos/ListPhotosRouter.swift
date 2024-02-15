@@ -8,17 +8,36 @@
 import Foundation
 import UIKit
 
-class ListPhotosRouter {
+protocol ListPhotosRouting {
+    var detailRouter: DetailRouting? { get }
+    var listPhotoView: ListPhotosView? { get }
+    
+    func showListPhotos(window: UIWindow?)
+    func showDetailPhoto(withPhotoId photoId: String)
+}
+
+class ListPhotosRouter: ListPhotosRouting {
+    var detailRouter: DetailRouting?
+    var listPhotoView: ListPhotosView?
+    
     func showListPhotos(window: UIWindow?){
-        
+        self.detailRouter = DetailRouter()
         let interactor = ListPhotosInteractor()
-        let presenter = ListPhotosPresenter(listPhotosInteractor: interactor)
+        let presenter = ListPhotosPresenter(listPhotosInteractor: interactor, router: self)
         
-        let view = ListPhotosView(presenter: presenter)
-        presenter.ui = view
+        listPhotoView = ListPhotosView(presenter: presenter)
+        presenter.ui = listPhotoView
         // view.presenter = presenter
         
-        window?.rootViewController = view
+        window?.rootViewController = listPhotoView
         window?.makeKeyAndVisible()
+    }
+    
+    func showDetailPhoto(withPhotoId photoId: String) {
+        guard let fromViewController = listPhotoView else {
+            return
+        }
+        detailRouter?.showDetail(fromViewViewController: fromViewController, withPhotoId: photoId)
+        
     }
 }

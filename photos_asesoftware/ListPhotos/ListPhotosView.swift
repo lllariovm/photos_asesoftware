@@ -48,6 +48,7 @@ class ListPhotosView: UIViewController {
         ])
         
         photosTableView.dataSource = self
+        photosTableView.delegate = self
     }
 }
 
@@ -64,6 +65,12 @@ extension ListPhotosView: UITableViewDataSource {
         cell.configure(model: model)
         
         return cell
+    }
+}
+
+extension ListPhotosView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.onTapCell(atIndex: indexPath.row)
     }
 }
 

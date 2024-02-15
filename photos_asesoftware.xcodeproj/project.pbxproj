@@ -22,6 +22,13 @@
 		1C5F7F6D2B7D54B60094912F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5F7F6C2B7D54B60094912F /* Kingfisher */; };
 		1C5F7F702B7D5E8B0094912F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F6F2B7D5E8B0094912F /* ViewModel.swift */; };
 		1C5F7F722B7D60210094912F /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F712B7D60210094912F /* Mapper.swift */; };
+		1C5F7F752B7D77660094912F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F742B7D77660094912F /* DetailView.swift */; };
+		1C5F7F772B7D776E0094912F /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F762B7D776E0094912F /* DetailPresenter.swift */; };
+		1C5F7F792B7D777D0094912F /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F782B7D777D0094912F /* DetailInteractor.swift */; };
+		1C5F7F7B2B7D77860094912F /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F7A2B7D77860094912F /* DetailRouter.swift */; };
+		1C5F7F7E2B7D78430094912F /* DetailPhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F7D2B7D78430094912F /* DetailPhotoEntity.swift */; };
+		1C5F7F812B7D7B0E0094912F /* DetailPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F802B7D7B0E0094912F /* DetailPhotoViewModel.swift */; };
+		1C5F7F832B7D7BAB0094912F /* MapperDetailPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F7F822B7D7BAB0094912F /* MapperDetailPhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +48,13 @@
 		1C5F7F692B7D50B90094912F /* PhotoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellView.swift; sourceTree = "<group>"; };
 		1C5F7F6F2B7D5E8B0094912F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1C5F7F712B7D60210094912F /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		1C5F7F742B7D77660094912F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1C5F7F762B7D776E0094912F /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		1C5F7F782B7D777D0094912F /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		1C5F7F7A2B7D77860094912F /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		1C5F7F7D2B7D78430094912F /* DetailPhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoEntity.swift; sourceTree = "<group>"; };
+		1C5F7F802B7D7B0E0094912F /* DetailPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewModel.swift; sourceTree = "<group>"; };
+		1C5F7F822B7D7BAB0094912F /* MapperDetailPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperDetailPhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,7 @@
 		1C5F7F452B7D49ED0094912F /* photos_asesoftware */ = {
 			isa = PBXGroup;
 			children = (
+				1C5F7F732B7D772D0094912F /* DetailPhoto */,
 				1C5F7F5D2B7D4A580094912F /* ListPhotos */,
 				1C5F7F462B7D49ED0094912F /* AppDelegate.swift */,
 				1C5F7F482B7D49ED0094912F /* SceneDelegate.swift */,
@@ -113,6 +128,36 @@
 			children = (
 				1C5F7F6F2B7D5E8B0094912F /* ViewModel.swift */,
 				1C5F7F712B7D60210094912F /* Mapper.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1C5F7F732B7D772D0094912F /* DetailPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				1C5F7F7F2B7D7AED0094912F /* ViewModel */,
+				1C5F7F7C2B7D778C0094912F /* Entities */,
+				1C5F7F742B7D77660094912F /* DetailView.swift */,
+				1C5F7F762B7D776E0094912F /* DetailPresenter.swift */,
+				1C5F7F782B7D777D0094912F /* DetailInteractor.swift */,
+				1C5F7F7A2B7D77860094912F /* DetailRouter.swift */,
+			);
+			path = DetailPhoto;
+			sourceTree = "<group>";
+		};
+		1C5F7F7C2B7D778C0094912F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1C5F7F7D2B7D78430094912F /* DetailPhotoEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1C5F7F7F2B7D7AED0094912F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C5F7F802B7D7B0E0094912F /* DetailPhotoViewModel.swift */,
+				1C5F7F822B7D7BAB0094912F /* MapperDetailPhotoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,12 +239,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C5F7F632B7D4A830094912F /* ListPhotosInteractor.swift in Sources */,
+				1C5F7F7B2B7D77860094912F /* DetailRouter.swift in Sources */,
 				1C5F7F4B2B7D49ED0094912F /* ViewController.swift in Sources */,
 				1C5F7F612B7D4A7B0094912F /* ListPhotosPresenter.swift in Sources */,
+				1C5F7F812B7D7B0E0094912F /* DetailPhotoViewModel.swift in Sources */,
+				1C5F7F7E2B7D78430094912F /* DetailPhotoEntity.swift in Sources */,
 				1C5F7F702B7D5E8B0094912F /* ViewModel.swift in Sources */,
 				1C5F7F722B7D60210094912F /* Mapper.swift in Sources */,
+				1C5F7F832B7D7BAB0094912F /* MapperDetailPhotoViewModel.swift in Sources */,
+				1C5F7F772B7D776E0094912F /* DetailPresenter.swift in Sources */,
+				1C5F7F792B7D777D0094912F /* DetailInteractor.swift in Sources */,
 				1C5F7F652B7D4A8C0094912F /* ListPhotosRouter.swift in Sources */,
 				1C5F7F472B7D49ED0094912F /* AppDelegate.swift in Sources */,
+				1C5F7F752B7D77660094912F /* DetailView.swift in Sources */,
 				1C5F7F6A2B7D50B90094912F /* PhotoCellView.swift in Sources */,
 				1C5F7F5F2B7D4A730094912F /* ListPhotosView.swift in Sources */,
 				1C5F7F492B7D49ED0094912F /* SceneDelegate.swift in Sources */,
