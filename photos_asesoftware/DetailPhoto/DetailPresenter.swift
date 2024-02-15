@@ -21,10 +21,10 @@ class DatailPresenter: DetailPresentable {
     weak var ui: DetailPresenterUI?
     
     let photoId: String
-    private let interactor: DetailInteractor
+    private let interactor: DetailInteractable
     private let mapper: MapperDetailPhotoViewModel
     
-    init(photoId: String, interactor: DetailInteractor, mapper: MapperDetailPhotoViewModel) {
+    init(photoId: String, interactor: DetailInteractable, mapper: MapperDetailPhotoViewModel) {
         self.photoId = photoId
         self.interactor = interactor
         self.mapper = mapper

@@ -21,3 +21,10 @@ class DetailInteractor: DetailInteractable {
         return try! jsonDecoder.decode(DetailPhotoEntity.self, from: data)
     }
 }
+
+class DetailInteractorMock: DetailInteractable {
+    func getDetailPhoto(withId id: String) async -> DetailPhotoEntity {
+        let detailPhoto = DetailPhotoEntity(albumId: 2, id: 1, title: "asdfjl a ksdjk", url: "https://via.placeholder.com/600/92c952", thumbnailUrl: "https://via.placeholder.com/150/92c952")
+        return detailPhoto
+    }
+}
